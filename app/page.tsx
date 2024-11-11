@@ -7,6 +7,14 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import {
   FaReact,
   FaNode,
   FaPython,
@@ -27,13 +35,7 @@ import {
 } from "react-icons/si";
 import { DiRedis, DiGoogleCloudPlatform } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io5";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Link from "next/link";
 
 const languages = [
   {
@@ -125,14 +127,60 @@ const carousels = [languages, technologies, frameworks];
 export default function Home() {
   return (
     <div className="flex items-center justify-between">
-      <div className="space-y-1">
+      <div className="space-y-6 w-full">
         <h2 className="text-2xl font-semibold tracking-tight">Hello</h2>
         <p className="text-sm text-muted-foreground">
-          I am a software engineer. I can make websites. I made this one mostly
-          because it is good to experiment with technologies outside of work, and
-          because you can host a static website for free with GitHub Pages.
+          I am a software engineer. I can make websites. I made and run this one
+          (almost) entirely <b>free</b>.
         </p>
-        <br />
+        <Separator />
+        <h2 className="text-2xl font-semibold tracking-tight">
+          How can you build and host a website for free?
+        </h2>
+        <p className="text-sm text-muted-foreground">
+          This website is built in React and Next.js. React is good for frontend
+          development. Next.js is a good website development framework,
+          supported by{" "}
+          <Link
+            href="https://nextjs.org/docs/app/getting-started/installation"
+            target="_blank"
+            className="underline"
+          >
+            GitHub Actions
+          </Link>
+          .
+        </p>
+        <ul className="list-inside list-decimal">
+          <li>
+            Build a{" "}
+            <Link
+              href="https://nextjs.org/docs/app/getting-started/installation"
+              target="_blank"
+              className="underline"
+            >
+              website with Next.js
+            </Link>
+            .
+          </li>
+          <li>
+            <Link
+              href="https://github.com/new"
+              target="_blank"
+              className="underline"
+            >
+              Publish it
+            </Link>{" "}
+            to a GitHub repository.
+          </li>
+          <li>In the repository settings, enable (in the following order):</li>
+          <ul className="list-inside indent-4 list-decimal">
+            <li>Pages.</li>
+            <li>GitHub Actions.</li>
+            <li>Next.js.</li>
+          </ul>
+          <li>Then all you need is your own domain name...</li>
+        </ul>
+        <Separator />
         <div className="flex flex-col items-center justify-center space-y-6">
           <Card className="w-[50%]">
             <CardHeader>

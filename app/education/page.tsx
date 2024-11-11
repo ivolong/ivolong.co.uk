@@ -112,7 +112,7 @@ const educationItems = [
 export default function Education() {
   return (
     <div className="flex items-center justify-between">
-      <div className="space-y-6 justify-center">
+      <div className="space-y-6 w-full justify-center">
         <h2 className="text-2xl font-semibold tracking-tight">Education</h2>
         <div className="flex flex-col items-center justify-center space-y-6">
           {educationItems.map((item, index) => (

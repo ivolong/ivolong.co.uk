@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "npx prettier --check \"**/*.{js,ts,jsx,tsx,mjs,json}\"",
-    "format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,mjs,json}\""
+    "format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,mjs,json}\"",
+    "pre-commit": "npm run format && npm run lint && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-context-menu": "^2.2.2",
