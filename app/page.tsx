@@ -129,7 +129,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold tracking-tight">Hello</h2>
         <p className="text-sm text-muted-foreground">
           I am a software engineer. I can make websites. I made this one mostly
-          because it's good to experiment with technologies outside of work, and
+          because it is good to experiment with technologies outside of work, and
           because you can host a static website for free with GitHub Pages.
         </p>
         <br />
