@@ -30,6 +30,11 @@ const experienceItems = [
           "Developed a low-latency, event-driven pipeline that extracts insights from financial documents in <30ms.",
       },
       {
+        title: "Telemetry",
+        description:
+          "Designed and built telemetry tools to automatically ingest client logs, saving our technical support team up to 5 minutes per query.",
+      },
+      {
         title: "Fullstack & UX",
         description:
           "Redesigned a user workflow to migrate off Oracle Database and modernize the UX/UIs, saving $47,500/year.",
