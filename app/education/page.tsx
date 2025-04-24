@@ -116,7 +116,7 @@ export default function Education() {
         <h2 className="text-2xl font-semibold tracking-tight">Education</h2>
         <div className="flex flex-col items-center justify-center space-y-6">
           {educationItems.map((item, index) => (
-            <Card key={index} className="w-[50%]">
+            <Card key={index} className="w-[90%] lg:w-[50%]">
               <CardHeader>
                 <CardTitle>{item.institution}</CardTitle>
                 <CardDescription>{item.qualification}</CardDescription>
@@ -130,10 +130,13 @@ export default function Education() {
                   <Carousel>
                     <CarouselContent>
                       {item.subQualifications.map((item, index) => (
-                        <CarouselItem key={index} className="basis-1/4">
+                        <CarouselItem
+                          key={index}
+                          className="basis-1/2 lg:basis-1/4"
+                        >
                           <Button variant="outline" className="w-full">
-                            {item.title}{" "}
-                            <b>{"grade" in item ? item.grade : ""}</b>
+                            <b>{"grade" in item ? item.grade : ""}</b>{" "}
+                            {item.title}
                           </Button>
                         </CarouselItem>
                       ))}

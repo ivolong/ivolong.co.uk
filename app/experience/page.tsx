@@ -80,7 +80,7 @@ export default function Experience() {
         <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
         <div className="flex flex-col items-center justify-center space-y-6">
           {experienceItems.map((item, index) => (
-            <Card key={index} className="w-[50%]">
+            <Card key={index} className="w-[90%] lg:w-[50%]">
               <CardHeader>
                 <CardTitle>{item.job}</CardTitle>
                 <CardDescription>{item.company}</CardDescription>
