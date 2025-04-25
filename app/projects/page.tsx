@@ -1,16 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Link from "next/link";
 import { FaReact, FaNode } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const projects = [
   {
@@ -71,19 +66,16 @@ export default function Projects() {
               </CardContent>
               <CardContent>
                 {project.skills && (
-                  <Carousel>
-                    <CarouselContent>
+                  <ScrollArea className="w-full whitespace-nowrap">
+                    <div className="space-x-2">
                       {project.skills.map((skill, index) => (
-                        <CarouselItem key={index} className="basis-1.">
-                          <Button variant="outline" className="w-full">
-                            {skill.icon} {skill.title}
-                          </Button>
-                        </CarouselItem>
+                        <Button key={index} variant="outline">
+                          {skill.icon} {skill.title}
+                        </Button>
                       ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
+                    </div>
+                    <ScrollBar orientation="horizontal" />
+                  </ScrollArea>
                 )}
               </CardContent>
             </Card>

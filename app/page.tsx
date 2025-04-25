@@ -1,20 +1,4 @@
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
   FaReact,
   FaNode,
   FaPython,
@@ -36,6 +20,17 @@ import {
 import { DiRedis, DiGoogleCloudPlatform } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io5";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 
 const languages = [
   {
@@ -234,19 +229,16 @@ export default function Home() {
             </CardHeader>
             {carousels.map((carousel, index) => (
               <CardContent key={index}>
-                <Carousel>
-                  <CarouselContent>
+                <ScrollArea className="w-full whitespace-nowrap">
+                  <div className="space-x-2">
                     {carousel.map((skill, index) => (
-                      <CarouselItem key={index} className="basis-1.">
-                        <Button variant="outline" className="w-full">
-                          {skill.icon} {skill.title}
-                        </Button>
-                      </CarouselItem>
+                      <Button key={index} variant="outline">
+                        {skill.icon} {skill.title}
+                      </Button>
                     ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
+                  </div>
+                  <ScrollBar orientation="horizontal" />
+                </ScrollArea>
               </CardContent>
             ))}
           </Card>

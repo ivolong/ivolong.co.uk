@@ -6,13 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const educationItems = [
   {
@@ -127,20 +121,17 @@ export default function Education() {
               </CardHeader>
               <CardContent>
                 {item.subQualifications && (
-                  <Carousel>
-                    <CarouselContent>
+                  <ScrollArea className="w-full whitespace-nowrap">
+                    <div className="space-x-2">
                       {item.subQualifications.map((item, index) => (
-                        <CarouselItem key={index} className="basis-1.">
-                          <Button variant="outline" className="w-full">
-                            <b>{"grade" in item ? item.grade : ""}</b>{" "}
-                            {item.title}
-                          </Button>
-                        </CarouselItem>
+                        <Button key={index} variant="outline">
+                          <b>{"grade" in item ? item.grade : ""}</b>{" "}
+                          {item.title}
+                        </Button>
                       ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
+                    </div>
+                    <ScrollBar orientation="horizontal" />
+                  </ScrollArea>
                 )}
               </CardContent>
             </Card>
