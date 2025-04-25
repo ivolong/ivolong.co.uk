@@ -130,10 +130,7 @@ export default function Education() {
                   <Carousel>
                     <CarouselContent>
                       {item.subQualifications.map((item, index) => (
-                        <CarouselItem
-                          key={index}
-                          className="basis-1/2 lg:basis-1/4"
-                        >
+                        <CarouselItem key={index} className="basis-1.">
                           <Button variant="outline" className="w-full">
                             <b>{"grade" in item ? item.grade : ""}</b>{" "}
                             {item.title}

@@ -74,10 +74,7 @@ export default function Projects() {
                   <Carousel>
                     <CarouselContent>
                       {project.skills.map((skill, index) => (
-                        <CarouselItem
-                          key={index}
-                          className="basis-1/2 lg:basis-1/3"
-                        >
+                        <CarouselItem key={index} className="basis-1.">
                           <Button variant="outline" className="w-full">
                             {skill.icon} {skill.title}
                           </Button>

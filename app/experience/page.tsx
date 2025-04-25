@@ -91,7 +91,10 @@ export default function Experience() {
                   <Carousel>
                     <CarouselContent>
                       {item.projects.map((item, index) => (
-                        <CarouselItem key={index} className="basis-1/2">
+                        <CarouselItem
+                          key={index}
+                          className="basis-1/1 lg:basis-1/2"
+                        >
                           <Card>
                             <CardHeader>
                               <CardTitle>{item.title}</CardTitle>
