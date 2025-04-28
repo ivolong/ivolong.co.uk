@@ -125,7 +125,7 @@ export default function Education() {
                     <div className="space-x-2">
                       {item.subQualifications.map((item, index) => (
                         <Button key={index} variant="outline">
-                          <b>{item.grade?}</b>
+                          <b>{"grade" in item ? item.grade : ""}</b>
                           {item.title}
                         </Button>
                       ))}
