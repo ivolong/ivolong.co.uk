@@ -5,5 +5,6 @@
 [![shadcn](https://img.shields.io/badge/shadcn/ui-000000.svg?style=for-the-badge&logo=shadcn/ui&logoColor=white)](https://ui.shadcn.com/)
 
 [![deploy](https://github.com/ivolong/ivolong.co.uk/actions/workflows/nextjs.yml/badge.svg)](https://github.com/ivolong/ivolong.co.uk/actions/workflows/nextjs.yml)
+[![ci](https://github.com/ivolong/ivolong.co.uk/actions/workflows/ci.yml/badge.svg)](https://github.com/ivolong/ivolong.co.uk/actions/workflows/ci.yml)
 
 Static page generation for my [personal website](https://ivolong.co.uk).
